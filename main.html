@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link href="style.css" rel="stylesheet" />
+</head>
+<body>
+  <h1>2HR UPDATE GENERATOR</h1>
+  <form>
+    <fieldset id="balances">
+        <legend>Initial Balances</legend>
+        <div class="initial">
+            <label>UTH80: </label><input id="0" type = "number"/>
+        </div>
+        <div class="initial">
+            <label>UTH81: </label><input id="1" type = "number"/>
+        </div>
+        <div class="initial">
+            <label>FUPGP82: </label><input id="2" type = "number"/>
+        </div>
+        <div class="initial">
+            <label>BJ83: </label><input id="3" type = "number"/>
+        </div>
+        <div class="initial">
+            <label>BJ84: </label><input id="4" type = "number"/>
+        </div>
+        <div class="initial">
+            <label>BJ85: </label><input id="5" type = "number"/>
+        </div>
+        <div class="initial">
+            <label>BJ86: </label><input id="6" type = "number"/>
+        </div>
+        <div class="initial">
+            <label>BJ87: </label><input id="7" type = "number"/>
+        </div>
+        <div class="initial">
+            <label>TCP88: </label><input id="8" type = "number"/>
+        </div>
+        <div class="initial">
+            <label>TCP89: </label><input id="9" type = "number"/>
+        </div>
+        <div class="initial">
+            <label>EZB90: </label><input id="10" type = "number">
+        </div>
+        <div class="initial">
+            <label>EZB91: </label><input id="11" type = "number"/>
+        </div>
+        <div class="initial">
+            <label>EZB92: </label><input id="12" type = "number"/>
+        </div>
+        <div class="initial">
+            <label>EZB93: </label><input id="13" type = "number"/>
+        </div>
+        <div class="initial">
+            <label>EZB94: </label><input id="14" type = "number"/>
+        </div>
+        <div class="initial">
+            <label>EZB95: </label><input id="15" type = "number"/>
+        </div>
+    </fieldset>
+
+    <fieldset id="current">
+        <legend>Current Balances</legend>
+        <div id="80" class="table">
+            <input id = "eightyOpen" type="checkbox"><label></label>
+            <label>UTH80 Balance =</label><input id="balanceEighty" type = "number" value=""/>
+            <label> Collection = </label><input id="collection80" type="number">
+            <label> Players = </label><input id="playersOnEighty" type="number">
+            <input id = "eightyCapped" type="checkbox"><label> CAP</label>
+            <input id = "eightyClsd" type="checkbox"><label>CLSD</label>
+        </div>
+        <div id="81" class="table">
+            <input id = "eightyOneOpen" type="checkbox"><label></label>
+            <label>UTH81 Balance = </label><input id="balanceEightyOne" type = "number" value=""/>
+            <label> Collection = </label><input id="collection81" type="number">
+            <label> Players = </label><input id="playersOnEightyOne" type="number">
+            <input id = "eightyOneCapped" type="checkbox"> <label>CAP</label>
+            <input id = "eightyOneClsd" type="checkbox"><label> CLSD</label>
+        </div>
+        <div id="82" class="table">
+            <input id = "eightyTwoOpen" type="checkbox"><label></label>
+            <label>FUPGP82 Balance = </label><input id="balanceEightyTwo" type = "number" value=""/>
+            <label> Collection = </label><input id="collection82" type="number">
+            <label> Players = </label><input id="playersOnEightyTwo" type="number">
+            <input id = "eightyTwoCapped" type="checkbox"><label> CAP</label>
+            <input id = "eightyTwoClsd" type="checkbox"><label> CLSD</label>
+        </div>
+        <div id="83" class="table">
+            <input id = "eightyThreeOpen" type="checkbox"><label></label>
+            <label>BJ83 Balance = </label><input id="balanceEightyThree" type = "number" value=""/>
+            <label> Collection = </label><input id="collection83" type="number">
+            <label> Players = </label><input id="playersOnEightyThree" type="number">
+            <input id = "eightyThreeCapped" type="checkbox"><label> CAP</label>
+            <input id = "eightyThreeClsd" type="checkbox"><label> CLSD</label>
+        </div>
+        <div id="84" class="table">
+            <input id = "eightyFourOpen" type="checkbox"><label></label>
+            <label>BJ84 Balance = </label><input id="balanceEightyFour" type = "number" value=""/>
+            <label> Collection = </label><input id="collection84" type="number">
+            <label> Players = </label><input id="playersOnEightyFour" type="number">
+            <input id = "eightyFourCapped" type="checkbox"><label> CAP</label>
+            <input id = "eightyFourClsd" type="checkbox"><label> CLSD</label>
+        </div>
+        <div id="85" class="table">
+            <input id = "eightyFiveOpen" type="checkbox"><label></label>
+            <label>BJ85 Balance = </label><input id="balanceEightyFive" type = "number" value=""/>
+            <label> Collection = </label><input id="collection85" type="number">
+            <label> Players = </label><input id="playersOnEightyFive" type="number">
+            <input id = "eightyFiveCapped" type="checkbox"><label> CAP</label>
+            <input id = "eightyFiveClsd" type="checkbox"><label> CLSD</label>
+        </div>
+        <div id="86" class="table">
+            <input id = "eightySixOpen" type="checkbox"><label></label>
+            <label>BJ86 Balance = </label><input id="balanceEightySix" type = "number" value=""/>
+            <label> Collection = </label><input id="collection86" type="number">
+            <label> Players = </label><input id="playersOnEightySix" type="number">
+            <input id = "eightySixCapped" type="checkbox"><label> CAP</label>
+            <input id = "eightySixClsd" type="checkbox"><label> CLSD</label>
+        </div>
+        <div id="87" class="table">
+            <input id = "eightySevenOpen" type="checkbox"><label></label>
+            <label>BJ87 Balance = </label><input id="balanceEightySeven" type = "number" value=""/>
+            <label> Collection = </label><input id="collection87" type="number">
+            <label> Players = </label><input id="playersOnEightySeven" type="number">
+            <input id = "eightySevenCapped" type="checkbox"><label> CAP</label>
+            <input id = "eightySevenClsd" type="checkbox"><label> CLSD</label>
+        </div>
+        <div id="88" class="table">
+            <input id = "eightyEightOpen" type="checkbox"><label></label>
+            <label>TCP88 Balance = </label><input id="balanceEightyEight" type = "number" value=""/>
+            <label> Collection = </label><input id="collection88" type="number">
+            <label> Players = </label><input id="playersOnEightyEight" type="number">
+            <input id = "eightyEightCapped" type="checkbox"><label> CAP</label>
+            <input id = "eightyEightClsd" type="checkbox"><label> CLSD</label>
+        </div>
+        <div id="89" class="table">
+            <input id = "eightyNineOpen" type="checkbox"><label></label>
+            <label>TCP89 Balance = </label><input id="balanceEightyNine" type = "number" value=""/>
+            <label> Collection = </label><input id="collection89" type="number">
+            <label> Players = </label><input id="playersOnEightyNine" type="number">
+            <input id = "eightyNineCapped" type="checkbox"><label> CAP</label>
+            <input id = "eightyNineClsd" type="checkbox"><label> CLSD</label>
+        </div>
+        <div id="90" class="table">
+            <input id = "ninetyOpen" type="checkbox"><label></label>
+            <label>EZB90 Balance = </label><input id="balanceNinety" type = "number" value=""/>
+            <label> Collection = </label><input id="collection90" type="number">
+            <label> Players = </label><input id="playersOnNinety" type="number">
+            <input id = "ninetyCapped" type="checkbox"><label> CAP</label>
+            <input id = "ninetyClsd" type="checkbox"><label> CLSD</label>
+        </div>
+        <div id="91" class="table">
+            <input id = "ninetyOneOpen" type="checkbox"><label></label>
+            <label>EZB91 Balance = </label><input id="balanceNinetyOne" type = "number" value=""/>
+            <label> Collection = </label><input id="collection91" type="number">
+            <label> Players = </label><input id="playersOnNinetyOne" type="number">
+            <input id = "ninetyOneCapped" type="checkbox"><label> CAP</label>
+            <input id = "ninetyOneClsd" type="checkbox"><label> CLSD</label>
+        </div>
+        <div id="92" class="table">
+            <input id = "ninetyTwoOpen" type="checkbox"><label></label>
+            <label>EZB92 Balance = </label><input id="balanceNinetyTwo" type = "number" value=""/>
+            <label> Collection = </label><input id="collection92" type="number">
+            <label> Players = </label><input id="playersOnNinetyTwo" type="number">
+            <input id = "ninetyTwoCapped" type="checkbox"><label> CAP</label>
+            <input id = "ninetyTwoClsd" type="checkbox"><label> CLSD</label>
+        </div>
+        <div id="93" class="table">
+            <input id = "ninetyThreeOpen" type="checkbox"><label></label>
+            <label>EZB93 Balance = </label><input id="balanceNinetyThree" type = "number" value=""/>
+            <label> Collection = </label><input id="collection93" type="number">
+            <label> Players = </label><input id="playersOnNinetyThree" type="number">
+            <input id = "ninetyThreeCapped" type="checkbox"><label> CAP</label>
+            <input id = "ninetyThreeClsd" type="checkbox"><label> CLSD</label>
+        </div>
+        <div id="94" class="table">
+            <input id = "ninetyFourOpen" type="checkbox"><label></label>
+            <label>EZB94 Balance = </label><input id="balanceNinetyFour" type = "number" value=""/>
+            <label> Collection = </label><input id="collection94" type="number">
+            <label> Players = </label><input id="playersOnNinetyFour" type="number">
+            <input id = "ninetyFourCapped" type="checkbox"><label> CAP</label>
+            <input id = "ninetyFourClsd" type="checkbox"><label> CLSD</label>
+        </div>
+        <div id="95" class="table">
+            <input id = "ninetyFiveOpen" type="checkbox"><label></label>
+            <label>EZB95 Balance = </label><input id="balanceNinetyFive" type = "number" value=""/>
+            <label> Collection = </label><input id="collection95" type="number">
+            <label> Players = </label><input id="playersOnNinetyFive" type="number">
+            <input id = "ninetyFiveCapped" type="checkbox"><label> CAP</label>
+            <input id = "ninetyFiveClsd" type="checkbox"><label> CLSD</label>
+        </div>
+    </fieldset>
+    <button type="button" onclick="genTemp()">Generate Template</button>
+  </form>
+
+  <div id="template">
+        <h2>Template</h2>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
