@@ -1,5 +1,5 @@
 body{
-    background-color: red;
+    background-color: #1b1b32;
     padding-top: 20px;
     font-family: Tahoma;
     font-size: 16px;
@@ -100,7 +100,7 @@ form {
    }
    #current{
       margin: 0px auto;
-      width: 650px;
+      width: 750px;
    }
 
    .balance, .collection, .players{
