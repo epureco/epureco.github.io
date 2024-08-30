@@ -90,3 +90,21 @@ form {
    text-align: center;
    margin-top: 7px;
  }
+
+ @media (max-device-width: 425px){
+   body{
+      margin: 0px auto;
+   }
+   form{
+      width: 700px;
+   }
+   #current{
+      margin: 0px auto;
+      width: 650px;
+   }
+
+   .balance, .collection, .players{
+      width: 50px;
+   }
+
+ }
