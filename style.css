@@ -12,7 +12,7 @@ h1{
 }
 
 form {
-    width: 650px;
+    width: 660px;
     
     min-width: 300px;
     margin: 0px auto;
@@ -47,7 +47,7 @@ form {
  }
 
  #current{
-    width: 650px;
+    width: 60px;
     border: none;
     margin: 0px auto;
     margin-top: 10px;
