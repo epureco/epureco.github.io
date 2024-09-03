@@ -4,7 +4,11 @@ let theString = "";
 let totalProfit = 0;
 let totalCollection = 0;
 let totalPlayers = 0;
+let totalTables = 0;
+let totalCapped = 0;
+let totalDeadSpreads = 0;
 const theText = document.getElementById("template");
+let updateTime = "";
 
 function table(name, start, current, opened, coll, play, cap, clsd){
     this.tableName = name;
@@ -67,6 +71,7 @@ function checkIfCapped(){
     for(let i = 0; i < activeTables.length; i++){
         if(activeTables[i].capped === true){
             activeTables[i].players = "CAP";
+            totalCapped++;
         }
     }
 }
@@ -75,6 +80,9 @@ function checkIfClosed(){
     for(let i = 0; i < activeTables.length; i++){
         if(activeTables[i].closed === true){
             activeTables[i].players = "CLSD";
+        }
+        else{
+            totalTables++;
         }
     }
 }
@@ -117,8 +125,16 @@ function assignOperator(){
     }
 }
 
+function checkDeadSpreads(){
+    for(let i = 0; i < activeTables.length; i++){
+        if(activeTables[i].players === 0 || activeTables[i].players === "CAP"){
+            totalDeadSpreads++;
+        }
+    }
+}
+
 function createString(){
-    theString = "<h2>Template</h2>";
+    theString = "<h2>Template</h2><p>" + updateTime + " UPDATE</p>";
     for(let i = 0; i < activeTables.length; i++){
         if(activeTables[i].capped !== true && activeTables[i].closed !== true){
             theString += "<p>" + activeTables[i].tableName + ": " + activeTables[i].operator + "$" + activeTables[i].profit + " C-$" + activeTables[i]. collection + " | " + activeTables[i].players + "p</p>";
@@ -128,15 +144,16 @@ function createString(){
         }
     }
     if(totalProfit >= 0 ){
-        theString += "<p>-------------------</p><p>Profit: +$" + totalProfit + "</p><p>Collection: $" + totalCollection + "</p><p>Players: " + totalPlayers + "p</p><p>-------------------</p>";
+        theString += "<p>-------------------</p><p>Profit: +$" + totalProfit + "</p><p>Collection: $" + totalCollection + "</p>" + "<p>-------------------</p>" + "<p>Tables: " + totalTables + "</p>" + "<p>Dead-spreads: " + totalDeadSpreads + "</p>" + "<p>Capped: " + totalCapped + "</p><p>Players: " + totalPlayers + "p</p><p>-------------------</p>";
     }
     else{
-        theString += "<p>-------------------</p><p>Profit: -$" + totalProfit + "</p><p>Collection: $" + totalCollection + "</p><p>Players: " + totalPlayers + "p</p><p>-------------------</p>";
+        theString += "<p>-------------------</p><p>Profit: -$" + totalProfit*-1 + "</p><p>Collection: $" + totalCollection + "</p>" + "<p>-------------------</p>" + "<p>Tables: " + totalTables + "</p>" + "<p>Dead-spreads: " + totalDeadSpreads + "</p>" + "<p>Capped: " + totalCapped + "</p><p>Players: " + totalPlayers + "p</p><p>-------------------</p>";
     }
 }
 
 
 function genTemp(){
+    updateTime = document.getElementById("time").value;
     theText.innerHTML = "<h2>Template</h2>"
     setObj();
     setActiveTables();
@@ -144,9 +161,13 @@ function genTemp(){
     totalCollection = addCollection();
     checkIfCapped();
     checkIfClosed();
+    checkDeadSpreads();
     totalPlayers = addPlayers();
     assignOperator();
     createString();
+    totalCapped = 0;
+    totalDeadSpreads = 0;
+    totalTables = 0;
     theText.innerHTML = theString;
     activeTables = [];
     objArr = [];
