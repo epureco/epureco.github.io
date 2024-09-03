@@ -12,7 +12,7 @@ h1{
 }
 
 form {
-    width: 60vw;
+    width: 650px;
     
     min-width: 300px;
     margin: 0px auto;
@@ -47,7 +47,7 @@ form {
  }
 
  #current{
-    width: 1000px;
+    width: 650px;
     border: none;
     margin: 0px auto;
     margin-top: 10px;
@@ -76,7 +76,7 @@ form {
 #template{
    margin-top: 10px;
    margin: 0px auto;
-   width: 600px;
+   width: 650px;
    border-top: 3px solid #3b3b4f;
    height: 1000px;
 }
@@ -91,16 +91,32 @@ form {
    margin-top: 7px;
  }
 
+ .balance, .collection, .players{
+   width: 50px;
+}
+
+#time-container{
+   width: 650px;
+   height: 50px;
+   
+   text-align: center;
+}
+
+#time{
+   margin-right: 23px;
+}
+
  @media (max-device-width: 425px){
    body{
       margin: 0px auto;
    }
    form{
-      width: 850px;
+      width: 700px;
    }
+
    #current{
       margin: 0px auto;
-      width: 800px;
+      width: 650px;
    }
 
    .balance, .collection, .players{
