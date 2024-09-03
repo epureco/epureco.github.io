@@ -117,12 +117,12 @@ input::-webkit-inner-spin-button {
       margin: 0px auto;
    }
    form{
-      width: 735px;
+      width: 750px;
    }
 
    #current{
       margin: 0px auto;
-      width: 735px;
+      width: 750px;
    }
 
    .balance, .collection, .players{
