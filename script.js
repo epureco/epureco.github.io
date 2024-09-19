@@ -145,7 +145,12 @@ function createString(){
             }
         }
         else{
-            theString += "<p>" + activeTables[i].tableName + ": " + activeTables[i].operator + "$" + activeTables[i].profit + " C-$" + activeTables[i]. collection + " | " + activeTables[i].players + "</p>";
+            if(activeTables[i].profit >= 1000){
+                    theString += "<p>" + activeTables[i].tableName + ": " + activeTables[i].operator + "$" + activeTables[i].profit/Math.pow(10, 3) + "k C-$" + activeTables[i]. collection + " | " + activeTables[i].players + "</p>";
+                }
+                else{
+                theString += "<p>" + activeTables[i].tableName + ": " + activeTables[i].operator + "$" + activeTables[i].profit + " C-$" + activeTables[i]. collection + " | " + activeTables[i].players + "</p>";
+                }
         }
     }
     if(totalProfit >= 0 ){
