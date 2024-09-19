@@ -137,7 +137,12 @@ function createString(){
     theString = "<h2>Template</h2><p>" + updateTime + " UPDATE</p>";
     for(let i = 0; i < activeTables.length; i++){
         if(activeTables[i].capped !== true && activeTables[i].closed !== true){
+            if(activeTables[i].profit >= 1000){
+                theString += "<p>" + activeTables[i].tableName + ": " + activeTables[i].operator + "$" + activeTables[i].profit/Math.pow(10, 3) + "k C-$" + activeTables[i]. collection + " | " + activeTables[i].players + "</p>";
+            }
+            else{
             theString += "<p>" + activeTables[i].tableName + ": " + activeTables[i].operator + "$" + activeTables[i].profit + " C-$" + activeTables[i]. collection + " | " + activeTables[i].players + "p</p>";
+            }
         }
         else{
             theString += "<p>" + activeTables[i].tableName + ": " + activeTables[i].operator + "$" + activeTables[i].profit + " C-$" + activeTables[i]. collection + " | " + activeTables[i].players + "</p>";
